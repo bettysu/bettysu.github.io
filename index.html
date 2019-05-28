@@ -313,7 +313,22 @@
 </blockquote>
 </li>
 </ul>
-<figure class="highlight graph"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">participant Alice</span><br><span class="line">participant Bob</span><br><span class="line">Alice-&gt;John: Hello John, how are you?</span><br><span class="line">loop Healthcheck</span><br><span class="line">John-&gt;John: Fight against hypochondria</span><br><span class="line">end</span><br><span class="line">Note right of John: Rational thoughts </span><br><span class="line">prevail...</span><br><span class="line">John--&gt;Alice: Great!</span><br><span class="line">John-&gt;Bob: How about you?</span><br><span class="line">Bob--&gt;John: Jolly good!</span><br></pre></td></tr></table></figure>
+<p><div id="flowchart-0" class="flow-chart"></div></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|request
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
           
         
